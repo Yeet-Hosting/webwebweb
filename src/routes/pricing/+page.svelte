@@ -6,7 +6,7 @@
 				Save money on your hosting costs with Yeet Hosting and enjoy our dedicated customer support
 				team's assistance with any questions or concerns you may have.
 			</p>
-			<a href="/pricing/mindustry/#pricing" class="btn-secondary btn"
+			<a href="/pricing/" class="btn-secondary btn"
 				>Get Started<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 20 20"
