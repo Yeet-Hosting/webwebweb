@@ -23,7 +23,7 @@
 		</div>
 	</div>
 </div>
-
+</div>
 
 <div class="m-2 mx-auto flex h-full p-1 text-center sm:justify-evenly md:justify-between">
 	<div id="pricing" class="card bg-base-100 shadow-xl">
@@ -34,7 +34,7 @@
 				covered with our bare minimum option.
 			</p>
 			<div class="my-8 flex items-baseline  justify-center">
-				<span class="mr-2 text-5xl text-gray-50 font-extrabold">$0</span>
+				<span class="mr-2 text-5xl text-gray-50 font-extrabold">$1</span>
 				<span class="text-gray-500 dark:text-gray-400">/month</span>
 			</div>
 			<ul class="mb-8 space-y-4 text-left">
