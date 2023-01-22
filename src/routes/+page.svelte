@@ -132,7 +132,7 @@ const items = [
 		</div>
 		<svelte:component this={Carousel} let:showPrevPage let:showNextPage
 		autoplay
-		autoplayDuration={2500}
+		autoplayDuration={3000}
 		>
 		<button
 			type="button"
