@@ -18,14 +18,14 @@
 		</label>
 		<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 		<ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-		  <li><a href="/#about">About</a></li>
+		  <li><a href="/about">About</a></li>
 		  <li><a href="/#services">Services</a></li>
 		</ul>
 	  </div>	</div>
 	<div class="navbar-center hidden md:visible lg:visible lg:flex">
 		<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 		<ul tabindex="0" class="menu menu-horizontal px-1 space-x-1">
-			<li><a href="/#about" class="btn bt">About</a></li>
+			<li><a href="/about" class="btn bt">About</a></li>
 			<li><a href="/#services" class="btn bt">Services</a></li>
 		  </ul>
 	</div>
