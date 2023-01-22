@@ -125,14 +125,14 @@ const items = [
 								d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
 							/>
 						</svg>
-						Fast Transfer Rate
+						99.997% Uptime
 					</h2>
 				</div>
 			</div>
 		</div>
 		<svelte:component this={Carousel} let:showPrevPage let:showNextPage
 		autoplay
-		autoplayDuration={2000}
+		autoplayDuration={2500}
 		>
 		<button
 			type="button"
@@ -167,8 +167,7 @@ const items = [
 		>
 		</button>
 	</svelte:component>
-		<div class="card-body">
-			
+		<div class="card-body">		
 		</div>
 	</div>
 </div>
