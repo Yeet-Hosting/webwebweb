@@ -140,7 +140,31 @@
 		</article>
 	</div>
 </div>
-
+<div class="hero min-h-screen bg-base-200">
+	<div class="hero-content text-center">
+		<div class="max-w-md">
+			<h1 class="text-5xl font-bold">Find the plan most flexible to you.</h1>
+			<p class="py-6">
+				Save money on your hosting costs with Yeet Hosting and enjoy our dedicated customer support
+				team's assistance with any questions or concerns you may have.
+			</p>
+			<a href="/pricing/" class="btn-secondary btn"
+				>Get Started<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 20 20"
+					fill="currentColor"
+					class="h-5 w-5"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>
 <div id="services" class="card bg-base-100 shadow-xl lg:card-side">
 	<div class="card-body">
 		<h1 class="card-title flex flex-wrap justify-center text-3xl font-bold">Services</h1>
