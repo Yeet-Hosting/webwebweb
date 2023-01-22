@@ -4,19 +4,57 @@
 	import mc from '$lib/assets/img/minecraft.jfif';
 	import logo from '$lib/assets/img/apple-touch-icon.png';
 	import rt from '$lib/assets/img/testimonials/testimonials-1.jpg';
+	import { onMount } from "svelte";
+    let Carousel;
+    onMount(async () => {
+    const module = await import("svelte-carousel");
+    Carousel = module.default;
+   });
+const items = [
+  {
+	name: "Sultan Bismillah II",
+	review: "Cheapest hosting ever. Very nice support and helped me all the way through my setup!",
+	role: "Customer",
+	image: "src/lib/assets/img/testimonials/testimonials-0.gif"
+  },
+  {
+	name: "RT Omega",
+	review: "Yeet Hosting is just amazing, it has great ping and its better than what i was previously using.",
+	role: "Omega Hub Owner",
+	image: "src/lib/assets/img/testimonials/testimonials-1.jpg"
+  },
+  {
+	name: "Schutz",
+	review: "Simple, Fast, Good Support",
+	role: "Customer",
+	image: "src/lib/assets/img/testimonials/testimonials-2.jpg"
+  },
+  {
+	name: "KingBR",
+	review: "Cheap, stable, highly customizable options and fast support. You can use it for either small servers with your friends or servers for dozens of people.",
+	role: "Owner of MindustryBR",
+	image: "src/lib/assets/img/testimonials/testimonials-3.png"
+  },
+  {
+	name: "TheRadioactiveBanana",
+	review: "Amazing hosting service with highly customisable server interface that is easy to use too. servers are fast and start quickly. ",
+	role: "Owner of Eradication Mindustry",
+	image: "src/lib/assets/img/testimonials/testimonials-4.png"
+  }
+];
 </script>
-
+  
 <div class="card bg-base-100 shadow-xl transition-shadow">
 	<div class="card-body text-center">
-		<h1 class="text-center text-4xl font-extrabold sm:text-2xl md:text-4xl">
+		<h1 class="text-center text-4xl font-extrabold sm:text-4xl md:text-4xl">
 			Secure, flexible, reliable
 		</h1>
 		<h1
 			class="
-			m-2 bg-gradient-to-r from-yellow-500 via-purple-500
-			to-blue-500 bg-clip-text p-1 
+			m-2 bg-gradient-to-l from-yellow-500 via-green-500
+			to-cyan-500 bg-clip-text p-1 
 			text-center text-4xl font-extrabold
-			text-transparent sm:h-28 sm:text-2xl md:text-6xl
+			text-transparent sm:h-28 sm:text-4xl md:text-8xl
 			"
 		>
 			Yeet Hosting.
@@ -92,76 +130,45 @@
 				</div>
 			</div>
 		</div>
-		<div class="card-body">
-			<div class="flex w-full flex-col items-center justify-center">
-				<h1 class="w-4/5 text-center text-2xl leading-relaxed transition-all">
-					"Yeet Hosting is just amazing, it has great ping and its better than what i was previously
-					using."
-				</h1>
-				<div class="flex h-20 items-center gap-5">
-					<div class="h-12 w-12 overflow-hidden rounded-full bg-black">
-						<img alt="testimonial" src={rt} />
-					</div>
-					<div class="flex flex-col tracking-wider">
-						<!-- svelte-ignore a11y-label-has-associated-control -->
-						<label class=" text-base font-bold">RTOmega</label>
-						<!-- svelte-ignore a11y-label-has-associated-control -->
-						<label class="text-sm font-normal text-gray-400">Omega Hub Owner</label>
-					</div>
+		<svelte:component this={Carousel} let:showPrevPage let:showNextPage
+		autoplay
+		autoplayDuration={2000}
+		>
+		<button
+			type="button"
+			slot="prev"
+			on:click={showPrevPage}
+		>
+		</button>
+    {#each items as item, i (item.name)}
+    <div style="padding: 30px 8px; text-align: center; background: #; border-radius: 5px;">
+        <div class="flex w-full flex-col items-center justify-center">
+			<h1 class="w-4/5 text-center text-2xl leading-relaxed transition-all">
+				"{item.review}"
+			</h1>
+			<div class="flex h-20 items-center gap-5">
+				<div class="h-12 w-12 overflow-hidden rounded-full bg-black">
+					<img alt="testimonial" src={item.image} />
+				</div>
+				<div class="flex flex-col tracking-wider">
+					<!-- svelte-ignore a11y-label-has-associated-control -->
+					<label class=" text-base font-bold">{item.name}</label>
+					<!-- svelte-ignore a11y-label-has-associated-control -->
+					<label class="text-sm font-normal text-gray-400">{item.role}</label>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div id="about" class="card h-1/4 bg-base-200 shadow-xl lg:card-side">
-	<div class="divider" />
-	<figure><img src={logo} alt="About" /></figure>
-	<div class="card-body">
-		<article class="prose">
-			<h1 class="card-title text-center text-4xl font-bold">About Us</h1>
-			<div class="divider" />
-			At Yeet Hosting, we are dedicated to providing the best hosting solutions for businesses and individuals
-			alike. We understand the importance of having a reliable and efficient application, and we are
-			committed to making sure our customers have the resources they need to succeed online. Our team
-			is composed of experienced professionals who have a deep understanding of the latest hosting technologies.
-			We work closely with our customers to understand their unique needs and tailor our services to
-			fit those needs.
-			<br />
-			<br />
-			Whether you're looking to host a mindustry server or a complex discord bot, Yeet Hosting has the
-			tools and expertise you need to succeed. We offer a wide range of hosting options, including shared
-			hosting, VPS hosting, and dedicated servers, so you can choose the plan that best fits your needs.
-			In addition to our hosting services, we also offer a variety of other tools and resources to help
-			you build and manage your applications. From a easy to use control panel to a extensive knowledgebase,
-			we have everything you need to get your application up and running in no time.
-			<br />
-			<br />
-		</article>
-	</div>
-</div>
-<div class="hero min-h-screen bg-base-200">
-	<div class="hero-content text-center">
-		<div class="max-w-md">
-			<h1 class="text-5xl font-bold">Find the plan most flexible to you.</h1>
-			<p class="py-6">
-				Save money on your hosting costs with Yeet Hosting and enjoy our dedicated customer support
-				team's assistance with any questions or concerns you may have.
-			</p>
-			<a href="/pricing/" class="btn-secondary btn"
-				>Get Started<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 20 20"
-					fill="currentColor"
-					class="h-5 w-5"
-				>
-					<path
-						fill-rule="evenodd"
-						d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z"
-						clip-rule="evenodd"
-					/>
-				</svg>
-			</a>
+      </div>
+    {/each}
+		<button
+			type="button"
+			slot="next"
+			on:click={showNextPage}
+		>
+		</button>
+	</svelte:component>
+		<div class="card-body">
+			
 		</div>
 	</div>
 </div>
@@ -182,7 +189,7 @@
 						We are experts in doing this service, just ask us to set your server up after buying,
 						its free.
 					</p>
-					<h2 class="card-title text-3xl">$3 / Month</h2>
+					<h2 class="card-title text-2xl">Starting From $3/m</h2>
 				</div>
 			</div>
 			<br />
@@ -193,9 +200,10 @@
 				</figure>
 				<div class="card-body">
 					<h2 class="card-title">Minecraft Hosting</h2>
+					<div class="badge-secondary badge">NEW</div>
 					<div class="divider" />
-					<p>Minecraft Servers using Yeet Hosting can use up to 70 mods.</p>
-					<h2 class="card-title text-3xl">$6 / Month</h2>
+					<p>We provide you with utilities and DDOS protection to ensure your server's uptime!</p>
+					<h2 class="card-title text-2xl">Starting From $6/m</h2>
 				</div>
 			</div>
 			<br />
@@ -207,8 +215,8 @@
 				<div class="card-body">
 					<h2 class="card-title">Source Engine Hosting</h2>
 					<div class="divider" />
-					<p>Yeah! thats right, you can create a server on your favorite steam games!</p>
-					<h2 class="card-title text-3xl">$? / Month</h2>
+					<p>You can create a server on your favorite steam games!</p>
+					<h2 class="card-title text-2xl">Starting from 12$/m</h2>
 				</div>
 			</div>
 			<br />
@@ -220,10 +228,20 @@
 					<div class="badge-secondary badge">NEW</div>
 					<div class="divider" />
 					<p>For developers, we also offer a cheap plan to get started.</p>
-					<h2 class="card-title text-3xl">$? / Month</h2>
+					<h2 class="card-title text-2xl">Starting From 0.50$/m</h2>
 				</div>
 			</div>
 			<br />
 		</div>
 	</div>
 </div>
+<div class="hero h-80 bg-base-100">
+	<div class="hero-content text-center">
+		<div class="max-w-md">
+			<h1 class="text-6xl font-bold">What are you waiting for!</h1>
+			<p class="py-7"></p>
+			<a href="/pricing/" class="btn-secondary btn">Get Started</a>
+		</div>
+	</div>
+</div>
+

@@ -39,11 +39,11 @@
 <footer class="footer p-10 bg-base-200 text-base-content">
 	<div>
 		<img alt="Logo" width="100" height="100" src={logo} />
-		<p>Yeet Hosting™.<br />The best in hosting.<br />team@mindustry.me<br />+1(702)552-2237</p>
+		<p>Yeet Hosting™.<br />Host like a pro.<br />team@mindustry.me<br />+1(702)552-2237</p>
 	</div>
 	<div>
 		<span class="footer-title">Company</span>
-		<a href="/#about" class="link link-hover">About Us</a>
+		<a href="/about" class="link link-hover">About Us</a>
 		<a href="/#services" class="link link-hover">Our Services</a>
 	</div>
 	<div>
