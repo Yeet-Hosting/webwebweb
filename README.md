@@ -1,6 +1,6 @@
 # some website
 
-### Website located on https://beta.mindustry.me/
+### Website located on https://mindustry.me/
 
 Running:
 
