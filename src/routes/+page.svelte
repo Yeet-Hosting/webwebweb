@@ -3,7 +3,6 @@
 	import mindus from '$lib/assets/img/mindustry.webp';
 	import mc from '$lib/assets/img/minecraft.jfif';
 	import logo from '$lib/assets/img/apple-touch-icon.png';
-	import rt from '$lib/assets/img/testimonials/testimonials-1.jpg';
 	import { onMount } from "svelte";
     let Carousel;
     onMount(async () => {
@@ -43,7 +42,7 @@ const items = [
   }
 ];
 </script>
-  
+
 <div class="card bg-base-100 shadow-xl transition-shadow">
 	<div class="card-body text-center">
 		<h1 class="text-center text-4xl font-extrabold sm:text-4xl md:text-4xl">
@@ -52,7 +51,7 @@ const items = [
 		<h1
 			class="
 			m-2 bg-gradient-to-l from-yellow-500 via-green-500
-			to-cyan-500 bg-clip-text p-1 
+			to-cyan-500 bg-clip-text p-1
 			text-center text-4xl font-extrabold
 			text-transparent sm:h-28 sm:text-4xl md:text-8xl
 			"
@@ -167,7 +166,7 @@ const items = [
 		>
 		</button>
 	</svelte:component>
-		<div class="card-body">		
+		<div class="card-body">
 		</div>
 	</div>
 </div>
