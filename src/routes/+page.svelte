@@ -14,31 +14,31 @@ const items = [
 	name: "Sultan Bismillah II",
 	review: "Cheapest hosting ever. Very nice support and helped me all the way through my setup!",
 	role: "Customer",
-	image: "src/lib/assets/img/testimonials/testimonials-0.gif"
+	image: "/img/testimonials/testimonials-0.gif"
   },
   {
 	name: "RT Omega",
 	review: "Yeet Hosting is just amazing, it has great ping and its better than what i was previously using.",
 	role: "Omega Hub Owner",
-	image: "src/lib/assets/img/testimonials/testimonials-1.jpg"
+	image: "/img/testimonials/testimonials-1.jpg"
   },
   {
 	name: "Schutz",
 	review: "Simple, Fast, Good Support",
 	role: "Customer",
-	image: "src/lib/assets/img/testimonials/testimonials-2.jpg"
+	image: "/img/testimonials/testimonials-2.jpg"
   },
   {
 	name: "KingBR",
 	review: "Cheap, stable, highly customizable options and fast support. You can use it for either small servers with your friends or servers for dozens of people.",
 	role: "Owner of MindustryBR",
-	image: "src/lib/assets/img/testimonials/testimonials-3.png"
+	image: "/img/testimonials/testimonials-3.png"
   },
   {
 	name: "TheRadioactiveBanana",
 	review: "Amazing hosting service with highly customisable server interface that is easy to use too. servers are fast and start quickly. ",
 	role: "Owner of Eradication Mindustry",
-	image: "src/lib/assets/img/testimonials/testimonials-4.png"
+	image: "/img/testimonials/testimonials-4.png"
   }
 ];
 </script>
