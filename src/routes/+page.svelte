@@ -3,44 +3,48 @@
 	import mindus from '$lib/assets/img/mindustry.webp';
 	import mc from '$lib/assets/img/minecraft.jfif';
 	import logo from '$lib/assets/img/apple-touch-icon.png';
-	import { onMount } from "svelte";
-    let Carousel;
-    onMount(async () => {
-    const module = await import("svelte-carousel");
-    Carousel = module.default;
-   });
-const items = [
-  {
-	name: "Sultan Bismillah II",
-	review: "Cheapest hosting ever. Very nice support and helped me all the way through my setup!",
-	role: "Customer",
-	image: "/img/testimonials/testimonials-0.gif"
-  },
-  {
-	name: "RT Omega",
-	review: "Yeet Hosting is just amazing, it has great ping and its better than what i was previously using.",
-	role: "Omega Hub Owner",
-	image: "/img/testimonials/testimonials-1.jpg"
-  },
-  {
-	name: "Schutz",
-	review: "Simple, Fast, Good Support",
-	role: "Customer",
-	image: "/img/testimonials/testimonials-2.jpg"
-  },
-  {
-	name: "KingBR",
-	review: "Cheap, stable, highly customizable options and fast support. You can use it for either small servers with your friends or servers for dozens of people.",
-	role: "Owner of MindustryBR",
-	image: "/img/testimonials/testimonials-3.png"
-  },
-  {
-	name: "TheRadioactiveBanana",
-	review: "Amazing hosting service with highly customisable server interface that is easy to use too. servers are fast and start quickly. ",
-	role: "Owner of Eradication Mindustry",
-	image: "/img/testimonials/testimonials-4.png"
-  }
-];
+	import { onMount } from 'svelte';
+	let Carousel;
+	onMount(async () => {
+		const module = await import('svelte-carousel');
+		Carousel = module.default;
+	});
+	const items = [
+		{
+			name: 'Sultan Bismillah II',
+			review:
+				'Cheapest hosting ever. Very nice support and helped me all the way through my setup!',
+			role: 'Customer',
+			image: '/img/testimonials/testimonials-0.gif'
+		},
+		{
+			name: 'RT Omega',
+			review:
+				'Yeet Hosting is just amazing, it has great ping and its better than what i was previously using.',
+			role: 'Omega Hub Owner',
+			image: '/img/testimonials/testimonials-1.jpg'
+		},
+		{
+			name: 'Schutz',
+			review: 'Simple, Fast, Good Support',
+			role: 'Customer',
+			image: '/img/testimonials/testimonials-2.jpg'
+		},
+		{
+			name: 'KingBR',
+			review:
+				'Cheap, stable, highly customizable options and fast support. You can use it for either small servers with your friends or servers for dozens of people.',
+			role: 'Owner of MindustryBR',
+			image: '/img/testimonials/testimonials-3.png'
+		},
+		{
+			name: 'TheRadioactiveBanana',
+			review:
+				'Amazing hosting service with highly customisable server interface that is easy to use too. servers are fast and start quickly. ',
+			role: 'Owner of Eradication Mindustry',
+			image: '/img/testimonials/testimonials-4.png'
+		}
+	];
 </script>
 
 <div class="card bg-base-100 shadow-xl transition-shadow">
@@ -129,45 +133,37 @@ const items = [
 				</div>
 			</div>
 		</div>
-		<svelte:component this={Carousel} let:showPrevPage let:showNextPage
-		autoplay
-		autoplayDuration={3000}
+		<svelte:component
+			this={Carousel}
+			let:showPrevPage
+			let:showNextPage
+			autoplay
+			autoplayDuration={3000}
 		>
-		<button
-			type="button"
-			slot="prev"
-			on:click={showPrevPage}
-		>
-		</button>
-    {#each items as item, i (item.name)}
-    <div style="padding: 30px 8px; text-align: center; background: #; border-radius: 5px;">
-        <div class="flex w-full flex-col items-center justify-center">
-			<h1 class="w-4/5 text-center text-2xl leading-relaxed transition-all">
-				"{item.review}"
-			</h1>
-			<div class="flex h-20 items-center gap-5">
-				<div class="h-12 w-12 overflow-hidden rounded-full bg-black">
-					<img alt="testimonial" src={item.image} />
+			<button type="button" slot="prev" on:click={showPrevPage} />
+			{#each items as item, i (item.name)}
+				<div style="padding: 30px 8px; text-align: center; background: #; border-radius: 5px;">
+					<div class="flex w-full flex-col items-center justify-center">
+						<h1 class="w-4/5 text-center text-2xl leading-relaxed transition-all">
+							"{item.review}"
+						</h1>
+						<div class="flex h-20 items-center gap-5">
+							<div class="h-12 w-12 overflow-hidden rounded-full bg-black">
+								<img alt="testimonial" src={item.image} />
+							</div>
+							<div class="flex flex-col tracking-wider">
+								<!-- svelte-ignore a11y-label-has-associated-control -->
+								<label class=" text-base font-bold">{item.name}</label>
+								<!-- svelte-ignore a11y-label-has-associated-control -->
+								<label class="text-sm font-normal text-gray-400">{item.role}</label>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="flex flex-col tracking-wider">
-					<!-- svelte-ignore a11y-label-has-associated-control -->
-					<label class=" text-base font-bold">{item.name}</label>
-					<!-- svelte-ignore a11y-label-has-associated-control -->
-					<label class="text-sm font-normal text-gray-400">{item.role}</label>
-				</div>
-			</div>
-		</div>
-      </div>
-    {/each}
-		<button
-			type="button"
-			slot="next"
-			on:click={showNextPage}
-		>
-		</button>
-	</svelte:component>
-		<div class="card-body">
-		</div>
+			{/each}
+			<button type="button" slot="next" on:click={showNextPage} />
+		</svelte:component>
+		<div class="card-body" />
 	</div>
 </div>
 <div id="services" class="card bg-base-100 shadow-xl lg:card-side">
@@ -236,10 +232,9 @@ const items = [
 <div class="hero h-80 bg-base-100">
 	<div class="hero-content text-center">
 		<div class="max-w-md">
-			<h1 class="text-6xl font-bold">What are you waiting for!</h1>
-			<p class="py-7"></p>
+			<h1 class="text-5xl font-bold">What are you waiting for?</h1>
+			<p class="py-7" />
 			<a href="/pricing/" class="btn-secondary btn">Get Started</a>
 		</div>
 	</div>
 </div>
-
