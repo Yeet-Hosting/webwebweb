@@ -100,7 +100,7 @@
 				</li>
 
 				<div class="card-actions justify-center">
-					<button class="bt btn"
+					<a href="https://panel.mindustry.me/auth/register" class="bt btn"
 						>Get Started <svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 20 20"
@@ -113,7 +113,7 @@
 								clip-rule="evenodd"
 							/>
 						</svg>
-					</button>
+					</a>
 				</div>
 			</ul>
 		</div>
@@ -192,7 +192,7 @@
 				</li>
 
 				<div class="card-actions justify-center">
-					<button class="bt btn"
+					<a href="https://panel.mindustry.me/auth/register" class="bt btn"
 						>Get Started <svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 20 20"
@@ -205,7 +205,7 @@
 								clip-rule="evenodd"
 							/>
 						</svg>
-					</button>
+					</a>
 				</div>
 			</ul>
 		</div>
@@ -284,7 +284,7 @@
 				</li>
 
 				<div class="card-actions justify-center">
-					<button class="bt btn"
+					<a href="https://panel.mindustry.me/auth/register" class="bt btn"
 						>Get Started <svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 20 20"
@@ -297,7 +297,7 @@
 								clip-rule="evenodd"
 							/>
 						</svg>
-					</button>
+					</a>
 				</div>
 			</ul>
 		</div>
