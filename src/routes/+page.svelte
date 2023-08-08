@@ -207,7 +207,7 @@
 					<img src={sourceengine} width="400" height="255" alt="Source Engine" />
 				</figure>
 				<div class="card-body">
-					<h2 class="card-title">Source Engine Hosting</h2>
+					<h2 class="card-title">SteamCMD Hosting</h2>
 					<div class="divider" />
 					<p>You can create a server on your favorite steam games!</p>
 					<h2 class="card-title text-2xl">Starting from 12$/m</h2>
